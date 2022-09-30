@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static String calc(String input) throws DifferentNumberSystems, InvalidOperation, InvalidNumber, InvalidInput {
         String[] separated = input.split(" ");
@@ -135,7 +137,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    public static void tests() {
         try {
             System.out.println("Test romanToArabic:");
             System.out.println("I = " + romanToArabic("I")); // 1
@@ -225,6 +227,17 @@ public class Main {
 
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        try {
+            System.out.println(calc(s));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
