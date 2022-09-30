@@ -230,15 +230,10 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws DifferentNumberSystems, InvalidNumber, InvalidOperation, InvalidInput {
         Scanner in = new Scanner(System.in);
         String s = in.nextLine();
-        try {
-            System.out.println(calc(s));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        System.out.println(calc(s));
     }
 }
 
